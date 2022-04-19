@@ -1,0 +1,72 @@
+{
+  "name": "mi-salud-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "engines": {
+    "node": "12.9.0",
+    "npm": "6.10.2"
+  },
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "prebuild": "npm run frontend-build",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "frontend-build": "webpack",
+    "frontend-watch": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "deepmerge": "^4.2.2",
+    "fibers": "^5.0.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "roboto-fontface": "^0.10.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "url-loader": "^4.1.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "axios": "^0.19.1",
+    "babel-polyfill": "^6.26.0",
+    "connection-string": "^3.1.1",
+    "dotenv": "^8.2.0",
+    "hashids": "^2.1.0",
+    "heroku-logger": "^0.3.3",
+    "knex": "latest",
+    "pg": "^7.18.1",
+    "sirv-cli": "^0.4.5",
+    "sqlite3": "latest",
+    "strapi": "3.0.0-beta.17.8",
+    "strapi-admin": "3.0.0-beta.17.8",
+    "strapi-hook-bookshelf": "3.0.0-beta.17.8",
+    "strapi-hook-knex": "3.0.0-beta.17.8",
+    "strapi-plugin-content-manager": "3.0.0-beta.17.8",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.17.8",
+    "strapi-plugin-email": "3.0.0-beta.17.8",
+    "strapi-plugin-upload": "3.0.0-beta.17.8",
+    "strapi-plugin-users-permissions": "3.0.0-beta.17.8",
+    "strapi-utils": "3.0.0-beta.17.8",
+    "vue-router": "^3.4.2",
+    "vuetify": "^2.3.8",
+    "vuex": "^3.5.1",
+    "vuex-persist": "^2.2.0"
+  },
+  "author": {
+    "name": "Mi Salud Developer"
+  },
+  "strapi": {
+    "uuid": "50b4176b-51a2-4431-81a2-c418c1602830"
+  },
+  "license": "MIT"
+}

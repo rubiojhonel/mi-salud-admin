@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "surveys",
+  "info": {
+    "name": "survey",
+    "description": "Stores each answer of each question in a survey by a user."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "answer": {
+      "model": "choice"
+    },
+    "schedule": {
+      "model": "schedule"
+    },
+    "question": {
+      "model": "question"
+    }
+  }
+}

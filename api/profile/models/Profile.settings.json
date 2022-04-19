@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "lastname": {
+      "required": true,
+      "type": "string"
+    },
+    "firstname": {
+      "required": true,
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "sex": {
+      "required": true,
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "account": {
+      "model": "user",
+      "via": "profile",
+      "plugin": "users-permissions"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "isLeaderOf": {
+      "model": "team",
+      "via": "leader"
+    },
+    "isMemberOf": {
+      "model": "team",
+      "via": "members"
+    },
+    "isManagerOf": {
+      "model": "agency",
+      "via": "managers"
+    },
+    "token": {
+      "type": "string"
+    }
+  }
+}

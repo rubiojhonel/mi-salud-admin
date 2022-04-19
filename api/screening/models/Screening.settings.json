@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "screenings",
+  "info": {
+    "name": "screening",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "schedule": {
+      "model": "schedule",
+      "via": "submissions"
+    },
+    "answers": {
+      "collection": "choice"
+    },
+    "team": {
+      "model": "team"
+    },
+    "user": {
+      "model": "profile"
+    }
+  }
+}

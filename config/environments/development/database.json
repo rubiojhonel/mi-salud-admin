@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-bookshelf",
+      "settings": {
+        "client": "postgres",
+        "host": "localhost",
+        "port": 5432,
+        "database": "mi_salud",
+        "username": "postgres",
+        "password": "postgres"
+      },
+      "options": {
+        "useNullAsDefault": true
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/screenings",
+      "handler": "Screening.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/screenings/count",
+      "handler": "Screening.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/screenings/:id",
+      "handler": "Screening.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/screenings",
+      "handler": "Screening.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/screenings/:id",
+      "handler": "Screening.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/screenings/:id",
+      "handler": "Screening.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

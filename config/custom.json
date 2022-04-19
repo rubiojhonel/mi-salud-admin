@@ -1,0 +1,17 @@
+{
+  "myCustomConfiguration": "This configuration is accessible through strapi.config.myCustomConfiguration",
+  "initialData": {
+    "admin": {
+      "email": "misalud@misalud.org.ph",
+      "username": "misalud",
+      "password": "misalud"
+    },
+    "agency": {
+      "name": "Mi Salud Agency",
+      "address": "Zamboanga City"
+    },
+    "team": {
+      "name": "Mi Salud Team #1"
+    }
+  }
+}

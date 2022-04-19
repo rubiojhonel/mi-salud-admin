@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "agencies",
+  "info": {
+    "name": "agency",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text"
+    },
+    "teams": {
+      "collection": "team",
+      "via": "agency"
+    },
+    "managers": {
+      "collection": "profile",
+      "via": "isManagerOf"
+    }
+  }
+}

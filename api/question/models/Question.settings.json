@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "questions",
+  "info": {
+    "name": "question",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "text": {
+      "required": true,
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "choices": {
+      "collection": "choice",
+      "via": "question"
+    },
+    "category": {
+      "enum": [
+        "sleep",
+        "eat",
+        "exposure",
+        "family",
+        "support"
+      ],
+      "type": "enumeration"
+    }
+  }
+}

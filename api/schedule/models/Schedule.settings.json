@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "schedules",
+  "info": {
+    "name": "schedule",
+    "description": "Schedules of before, after, and during surveys."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "start": {
+      "required": true,
+      "type": "date"
+    },
+    "end": {
+      "required": true,
+      "type": "date"
+    },
+    "type": {
+      "required": true,
+      "enum": [
+        "pre",
+        "during",
+        "post"
+      ],
+      "type": "enumeration"
+    },
+    "team": {
+      "model": "team",
+      "via": "schedules"
+    },
+    "submissions": {
+      "collection": "screening",
+      "via": "schedule"
+    }
+  }
+}

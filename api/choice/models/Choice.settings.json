@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "choice",
+  "info": {
+    "name": "choice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "text": {
+      "required": true,
+      "type": "string"
+    },
+    "severity": {
+      "type": "integer"
+    },
+    "advice": {
+      "collection": "advice",
+      "via": "answer"
+    },
+    "question": {
+      "model": "question",
+      "via": "choices"
+    }
+  }
+}

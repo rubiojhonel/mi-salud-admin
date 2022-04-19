@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "advice",
+  "info": {
+    "name": "advice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "type": {
+      "enum": [
+        "general",
+        "pre",
+        "during",
+        "post"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "responderAdvice": {
+      "required": true,
+      "type": "text"
+    },
+    "leaderAdvice": {
+      "required": true,
+      "type": "text"
+    },
+    "answer": {
+      "model": "choice",
+      "via": "advice"
+    },
+    "question": {
+      "model": "question"
+    }
+  }
+}
